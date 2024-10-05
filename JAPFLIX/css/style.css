@@ -10,19 +10,125 @@
     background-color: beige;
 }
 
-.card-content{
-    height: 150px;
-    overflow: auto;
+.card-content {
+    position: relative;
+    color: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: #2c2f33; 
+    border: 1px solid #000000;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.card-content:hover {
+    transform: scale(1.02); 
+    background-color: #343a40;
+}
+
+.stars-container {
+    display: flex;
+    margin-left: 10px; 
+}
+
+.title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-title {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.card-tagline {
+    color: #6a737d;
+}
+
+.checked {
+    color: orange; 
+}
+
+.fa-star {
+    font-size: 1.2em; 
+    margin-right: 3px; 
+}
+
+.detalles-container {
+    position: absolute; /* Cambiado a 'absolute' */
+    background-color: #4f545a;
+    color: white;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 8px; 
+    box-shadow: 0 2px 8px rgba(255, 255, 255, 0.103); 
+    z-index: 1000; 
+    padding: 20px; 
+    max-width: 300px; 
+    max-height: 400px; 
+    overflow-y: auto; 
+}
+
+.overlay {
+    position: fixed; 
+    top: 0; 
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: 999; 
+    display: none; 
+}
+
+.detalles-container p {
+    margin: 5px 0;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); 
+    z-index: 999;
+    display: none;
+}
+
+.container-genresMore {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    z-index: 1002;
+}
+
+.dropdown-menu {
+    background-color: #343a40; 
+    border-radius: 8px;
+}
+
+.dropdown-menu li {
+    color: white;
+    padding: 10px;
+    font-size: 0.9em;
+}
+
+.dropdown-menu li:hover {
+    background-color: #495057;
+}
+
+footer {
+    background-color: #2c2f33;
+    color: #adb5bd;
 }
 
 main {
     min-height: calc(100vh - 100px);
-  }
-
-.checked{
-    color: orange;
-}
-
-.offcanvas-top{
-    height: fit-content;
+    padding-bottom: 30px; 
 }
